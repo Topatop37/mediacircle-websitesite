@@ -1,0 +1,9 @@
+{
+  "name": "Media Circle",
+  "short_name": "Media Circle",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ef",
+  "theme_color": "#111111",
+  "description": "Premium event photography, cinematography, booth rentals, and enhancements for metro Atlanta."
+}
