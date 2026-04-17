@@ -2,7 +2,7 @@ const siteConfig = {
   bookingUrl: "https://mediacircle.s1.boothbook.com",
   phoneDisplay: "833-847-6609",
   phoneHref: "tel:8338476609",
-  email: "email@mediacircle.io",
+  email: "info@mediacircle.io",
   address: "Stonecrest, Georgia serving metro Atlanta",
   home: "index.html",
   navItems: [
@@ -27,7 +27,8 @@ function buildHeader(root, currentPage) {
   const navLinks = siteConfig.navItems
     .map((item) => {
       const active = item.key === currentPage ? "active" : "";
-      return `<a class="${active}" href="${withRoot(root, item.href)}">${item.label}</a>`;
+      const current = item.key === currentPage ? ' aria-current="page"' : "";
+      return `<a class="${active}"${current} href="${withRoot(root, item.href)}">${item.label}</a>`;
     })
     .join("");
 
@@ -141,6 +142,38 @@ function initReveal() {
   revealEls.forEach((el) => observer.observe(el));
 }
 
+function initPackageBookingCards() {
+  const packageCards = document.querySelectorAll(".pricing-card");
+  packageCards.forEach((card) => {
+    if (card.dataset.bookingEnhanced === "true") return;
+
+    const heading = card.querySelector("h3");
+    const packageName = heading ? heading.textContent.trim() : "this package";
+    const bookingLabel = `Book ${packageName}`;
+
+    card.dataset.bookingEnhanced = "true";
+    card.dataset.bookingUrl = card.dataset.bookingUrl || siteConfig.bookingUrl;
+    card.classList.add("pricing-card-bookable");
+
+    if (!card.querySelector(".package-booking-action")) {
+      const action = document.createElement("a");
+      action.className = "button button-gold package-booking-action";
+      action.href = card.dataset.bookingUrl;
+      action.target = "_blank";
+      action.rel = "noreferrer";
+      action.textContent = "Book Now";
+      action.setAttribute("aria-label", bookingLabel);
+      card.appendChild(action);
+    }
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button, input, textarea, select, summary")) return;
+      window.open(card.dataset.bookingUrl, "_blank", "noopener,noreferrer");
+    });
+
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const root = body.dataset.root || ".";
@@ -151,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (footerMount) footerMount.innerHTML = buildFooter(root);
   initMenu();
   initReveal();
+  initPackageBookingCards();
   const year = document.getElementById("current-year");
   if (year) year.textContent = String(new Date().getFullYear());
 });

@@ -501,6 +501,16 @@ p {
   justify-items: center;
 }
 
+.pricing-card-bookable {
+  cursor: pointer;
+}
+
+.package-booking-action {
+  width: 100%;
+  margin-top: auto;
+  align-self: end;
+}
+
 .pricing-card .pill {
   align-self: start;
 }
@@ -1699,6 +1709,14 @@ p {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 ul {
