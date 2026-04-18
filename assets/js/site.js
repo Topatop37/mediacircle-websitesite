@@ -13,6 +13,7 @@ const siteConfig = {
     { key: "corporate", label: "Corporate", href: "pages/corporate-events.html" },
     { key: "booths", label: "Photo Booths", href: "pages/photo-booths.html" },
     { key: "prom", label: "Prom & Graduation", href: "pages/prom-graduation.html" },
+    { key: "portfolio", label: "Portfolio", href: "pages/portfolio.html" },
     { key: "blog", label: "Blog", href: "pages/blog.html" },
     { key: "quote", label: "Quote", href: "pages/contact.html" }
   ]

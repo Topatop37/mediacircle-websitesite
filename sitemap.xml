@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mediacircle.io/</loc></url>
-  <url><loc>https://mediacircle.io/pages/photography.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/cinematography.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/photo-booths.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/weddings.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/prom-graduation.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/corporate-events.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/contact.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/blog.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/privacy-policy.html</loc></url>
-  <url><loc>https://mediacircle.io/pages/terms-of-use.html</loc></url>
+
+  <!-- Core pages -->
+  <url><loc>https://mediacircle.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://mediacircle.io/pages/photography.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/cinematography.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/photo-booths.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mediacircle.io/pages/weddings.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mediacircle.io/pages/prom-graduation.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mediacircle.io/pages/corporate-events.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mediacircle.io/pages/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://mediacircle.io/pages/privacy-policy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://mediacircle.io/pages/terms-of-use.html</loc><priority>0.3</priority></url>
+
+  <!-- Location pages — Event Photography -->
+  <url><loc>https://mediacircle.io/pages/photographer-stonecrest.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/photographer-lithonia.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/photographer-decatur.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/photographer-snellville.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/photographer-conyers.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+
+  <!-- Location pages — Prom & Graduation -->
+  <url><loc>https://mediacircle.io/pages/prom-graduation-stonecrest.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/prom-graduation-lithonia.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/prom-graduation-decatur.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/prom-graduation-snellville.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/prom-graduation-conyers.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+
+  <!-- Location pages — Event Videography -->
+  <url><loc>https://mediacircle.io/pages/videographer-stonecrest.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/videographer-lithonia.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/videographer-decatur.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/videographer-snellville.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mediacircle.io/pages/videographer-conyers.html</loc><lastmod>2026-04-18</lastmod><priority>0.9</priority></url>
+
 </urlset>

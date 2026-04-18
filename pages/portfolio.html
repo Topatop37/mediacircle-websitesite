@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Media Circle — Atlanta Event Photography & Videography</title>
+  <meta name="description" content="Browse Media Circle's photography and videography portfolio — event coverage, portraits, graduations, weddings, and corporate work across metro Atlanta.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Portfolio | Media Circle — Atlanta Event Photography">
+  <meta property="og:description" content="Browse Media Circle's photography and videography portfolio — event coverage, portraits, graduations, weddings, and corporate work across metro Atlanta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mediacircle.io/pages/portfolio.html">
+  <meta property="og:image" content="https://mediacircle.io/assets/media-circle-logo.png">
+  <link rel="canonical" href="https://mediacircle.io/pages/portfolio.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* ── Portfolio Hero ── */
+    .portfolio-hero {
+      position: relative;
+      min-height: 70vh;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background: #080806;
+    }
+    .portfolio-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.38;
+      z-index: 0;
+    }
+    .portfolio-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(8,8,6,0.55) 0%, rgba(8,8,6,0.72) 100%),
+        linear-gradient(90deg, rgba(8,8,6,0.72) 0%, rgba(8,8,6,0.18) 60%);
+    }
+    .portfolio-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 7rem 0 5rem;
+    }
+    .portfolio-hero-content h1 {
+      color: #fffaf2;
+      max-width: 16ch;
+      line-height: 0.95;
+    }
+    .portfolio-hero-content .lead {
+      color: rgba(255,250,242,0.78);
+      max-width: 36rem;
+      margin-top: 1rem;
+    }
+    .portfolio-hero-content .eyebrow {
+      color: rgba(255,250,242,0.7);
+    }
+    .portfolio-hero-content .eyebrow::before {
+      background: linear-gradient(90deg, rgba(176,141,87,0.95), rgba(176,141,87,0.95));
+    }
+    .portfolio-hero-content .cta-row {
+      margin-top: 1.5rem;
+    }
+
+    /* ── Featured Statement Image ── */
+    .portfolio-statement {
+      width: 100%;
+      aspect-ratio: 16/8;
+      overflow: hidden;
+      display: block;
+    }
+    .portfolio-statement img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.7s ease;
+    }
+    .portfolio-statement:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ── Section Header Bar ── */
+    .portfolio-section-label {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+    .portfolio-section-label h2 {
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+    }
+    .portfolio-section-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    /* ── Grid Layouts ── */
+    .pg-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .pg-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .pg-grid-auto {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+      gap: 0.75rem;
+    }
+    .pg-grid-featured {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 0.75rem;
+    }
+    .pg-grid-featured-rev {
+      display: grid;
+      grid-template-columns: 1fr 1.55fr;
+      gap: 0.75rem;
+    }
+    .pg-grid-trio {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr 1fr;
+      gap: 0.75rem;
+    }
+
+    /* ── Photo Cells ── */
+    .pg-cell {
+      overflow: hidden;
+      border-radius: 1rem;
+      background: #111;
+      position: relative;
+    }
+    .pg-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .pg-cell:hover img {
+      transform: scale(1.05);
+    }
+    .pg-cell.tall    { aspect-ratio: 3/4; }
+    .pg-cell.square  { aspect-ratio: 1/1; }
+    .pg-cell.wide    { aspect-ratio: 16/10; }
+    .pg-cell.cinema  { aspect-ratio: 21/9; }
+    .pg-cell.portrait { aspect-ratio: 4/5; }
+
+    .pg-cell.span-2 { grid-column: span 2; }
+
+    /* Label badge on dark sections */
+    .pg-cell-label {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(8,8,6,0.72);
+      backdrop-filter: blur(10px);
+      color: rgba(255,250,242,0.9);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(176,141,87,0.3);
+    }
+
+    /* ── Divider ── */
+    .portfolio-divider {
+      width: min(calc(100% - 2rem), 1200px);
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(176,141,87,0.28), transparent);
+    }
+
+    /* ── Caption row under a section ── */
+    .pg-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Dark Portfolio Band ── */
+    .portfolio-dark-section {
+      background: #0c0b09;
+      padding: 5rem 0;
+    }
+    .portfolio-dark-section .portfolio-section-label h2,
+    .portfolio-dark-section .eyebrow {
+      color: #fffaf2;
+    }
+    .portfolio-dark-section .eyebrow {
+      color: rgba(255,250,242,0.65);
+    }
+
+    /* ── Stat strip ── */
+    .portfolio-stat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .portfolio-stat {
+      padding: 2.4rem 1rem;
+      border-right: 1px solid var(--line);
+    }
+    .portfolio-stat:last-child { border-right: none; }
+    .portfolio-stat-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.4rem, 7vw, 3.8rem);
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .portfolio-stat-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ── CTA Panel ── */
+    .portfolio-cta {
+      background:
+        radial-gradient(circle at 70% 50%, rgba(176,141,87,0.14), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, #ede7dc 100%);
+      padding: 6rem 0;
+      text-align: center;
+    }
+    .portfolio-cta h2 { max-width: 18ch; margin: 0 auto; }
+    .portfolio-cta p  { max-width: 36rem; margin: 1rem auto 0; }
+    .portfolio-cta .cta-row { justify-content: center; margin-top: 2rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .pg-grid-featured,
+      .pg-grid-featured-rev,
+      .pg-grid-trio { grid-template-columns: 1fr; }
+      .pg-grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .pg-cell.span-2 { grid-column: span 1; }
+    }
+    @media (max-width: 600px) {
+      .pg-grid-2,
+      .pg-grid-3 { grid-template-columns: 1fr; }
+      .portfolio-stat-strip { grid-template-columns: 1fr; }
+      .portfolio-stat { border-right: none; border-bottom: 1px solid var(--line); }
+      .portfolio-stat:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body data-page="portfolio" data-root="..">
+  <div class="site-shell">
+    <div data-site-header></div>
+    <main id="main-content">
+
+      <!-- ════════════════════════════════════════
+           HERO
+      ════════════════════════════════════════ -->
+      <section class="portfolio-hero">
+        <!-- REPLACE: Use your best full-event wide shot, e.g. a gala ballroom or the red carpet arrival -->
+        <img
+          class="portfolio-hero-bg"
+          src="../assets/portfolio/hero-bg.jpg"
+          alt="Media Circle event photography in Atlanta"
+        >
+        <div class="portfolio-hero-overlay"></div>
+        <div class="portfolio-hero-content">
+          <div class="container">
+            <span class="eyebrow reveal">Media Circle Portfolio</span>
+            <h1 class="reveal">Every moment.<br>Captured beautifully.</h1>
+            <p class="lead reveal">From corporate galas and university events to graduations, weddings, and studio sessions — this is the work we're proud to put our name on.</p>
+            <div class="cta-row reveal">
+              <a class="button button-gold" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer">Book Your Event</a>
+              <a class="button button-secondary" style="color:#fffaf2;border-color:rgba(255,250,242,0.22);" href="#events">View Work</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           STAT STRIP
+      ════════════════════════════════════════ -->
+      <div class="portfolio-stat-strip reveal">
+        <div class="portfolio-stat">
+          <div class="portfolio-stat-value">500+</div>
+          <div class="portfolio-stat-label">Events Covered</div>
+        </div>
+        <div class="portfolio-stat">
+          <div class="portfolio-stat-value">$1.2M</div>
+          <div class="portfolio-stat-label">Fully Insured</div>
+        </div>
+        <div class="portfolio-stat">
+          <div class="portfolio-stat-value">ATL</div>
+          <div class="portfolio-stat-label">Based in Metro Atlanta</div>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════
+           STATEMENT IMAGE — Grand Staircase Editorial
+      ════════════════════════════════════════ -->
+      <a href="#portraits" class="portfolio-statement reveal" aria-label="View portrait work">
+        <!-- REPLACE: Woman in silver pearl gown on grand staircase — your hero shot -->
+        <img
+          src="../assets/portfolio/editorial-staircase.jpg"
+          alt="Editorial portrait — Media Circle photography"
+        >
+      </a>
+
+
+      <!-- ════════════════════════════════════════
+           EVENTS & CORPORATE
+      ════════════════════════════════════════ -->
+      <section class="section" id="events">
+        <div class="container">
+          <div class="portfolio-section-label reveal">
+            <span class="eyebrow">Events &amp; Corporate</span>
+            <h2>Galas. Ceremonies. Corporate coverage.</h2>
+          </div>
+
+          <!-- Row 1: Featured + stacked -->
+          <div class="pg-grid-featured reveal" style="margin-bottom:0.75rem;">
+            <div class="pg-cell wide" style="aspect-ratio:4/3;">
+              <!-- REPLACE: Red carpet arrival — woman in red dress, arms raised, gold stanchions -->
+              <img src="../assets/portfolio/event-red-carpet.jpg" alt="Red carpet event arrival">
+              <span class="pg-cell-label">Red Carpet Coverage</span>
+            </div>
+            <div style="display:grid;gap:0.75rem;">
+              <div class="pg-cell square">
+                <!-- REPLACE: Corporate speakers at formal dinner/gala -->
+                <img src="../assets/portfolio/event-corporate-speakers.jpg" alt="Corporate gala speakers">
+              </div>
+              <div class="pg-cell square">
+                <!-- REPLACE: DJ at event with moody low-light -->
+                <img src="../assets/portfolio/event-dj.jpg" alt="DJ event coverage">
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Three column -->
+          <div class="pg-grid-trio reveal" style="margin-bottom:0.75rem;">
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Gold dress speaker at black & gold event -->
+              <img src="../assets/portfolio/event-gold-dress-speaker.jpg" alt="Event speaker in gold gown">
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Woman dancing at purple themed event — big energy, action shot -->
+              <img src="../assets/portfolio/event-purple-dance.jpg" alt="Celebration event coverage">
+              <span class="pg-cell-label">Celebrations</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Father and son in matching red/white tuxedos -->
+              <img src="../assets/portfolio/event-father-son.jpg" alt="Event portrait — father and son">
+            </div>
+          </div>
+
+          <!-- Row 3: Wide detail + photo booth -->
+          <div class="pg-grid-2 reveal">
+            <div class="pg-cell wide">
+              <!-- REPLACE: Red/gold elegant table centerpiece detail shot -->
+              <img src="../assets/portfolio/event-table-detail.jpg" alt="Event detail — elegant table setup">
+              <span class="pg-cell-label">Event Details</span>
+            </div>
+            <div class="pg-cell wide">
+              <!-- REPLACE: Woman at photo booth, arms open, big smile, bubbles -->
+              <img src="../assets/portfolio/event-photo-booth.jpg" alt="Photo booth experience">
+              <span class="pg-cell-label">Photo Booth</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="portfolio-divider"></div>
+
+
+      <!-- ════════════════════════════════════════
+           SCHOOL & UNIVERSITY — DARK BAND
+      ════════════════════════════════════════ -->
+      <section class="portfolio-dark-section" id="university">
+        <div class="container">
+          <div class="portfolio-section-label reveal">
+            <span class="eyebrow" style="color:rgba(255,250,242,0.65);">Schools &amp; Universities</span>
+            <h2 style="color:#fffaf2;">Graduations. Prom. Academic events.</h2>
+          </div>
+
+          <!-- Graduation featured -->
+          <div class="pg-grid-featured-rev reveal" style="margin-bottom:0.75rem;">
+            <div style="display:grid;gap:0.75rem;">
+              <div class="pg-cell portrait">
+                <!-- REPLACE: Graduation cap laughing shot — woman sitting, holding decorated cap -->
+                <img src="../assets/portfolio/graduation-cap-laugh.jpg" alt="Graduation cap celebration">
+                <span class="pg-cell-label">Graduation</span>
+              </div>
+            </div>
+            <div class="pg-cell" style="aspect-ratio:3/4;">
+              <!-- REPLACE: Graduation gown standing — woman in blue & orange gown on stairs -->
+              <img src="../assets/portfolio/graduation-standing.jpg" alt="Graduation portrait" style="object-position:top;">
+              <span class="pg-cell-label">Class of 2022</span>
+            </div>
+          </div>
+
+          <!-- Prom grid -->
+          <div class="pg-grid-3 reveal">
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Prom couple outdoor — brick building, formal wear -->
+              <img src="../assets/portfolio/prom-couple-outdoor.jpg" alt="Prom couple portrait">
+              <span class="pg-cell-label">Prom</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Three girls in formal gowns at prom — waterfall backdrop -->
+              <img src="../assets/portfolio/prom-three-girls.jpg" alt="Prom group portrait">
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Woman in gold ballgown against dark textured wall, waterfall below -->
+              <img src="../assets/portfolio/prom-gold-ballgown.jpg" alt="Prom portrait in gold gown">
+            </div>
+          </div>
+
+          <div style="margin-top:1rem;text-align:center;" class="reveal">
+            <a class="button button-gold" href="prom-graduation.html">View Prom &amp; Graduation Services</a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════════════════════════════════
+           PORTRAITS & HEADSHOTS
+      ════════════════════════════════════════ -->
+      <section class="section" id="portraits">
+        <div class="container">
+          <div class="portfolio-section-label reveal">
+            <span class="eyebrow">Portraits &amp; Headshots</span>
+            <h2>Individuals. Staff. Faculty.</h2>
+          </div>
+
+          <!-- Row 1 -->
+          <div class="pg-grid-featured reveal" style="margin-bottom:0.75rem;">
+            <div class="pg-cell" style="aspect-ratio:4/5;">
+              <!-- REPLACE: Dramatic side-lit studio portrait — woman against textured wall, intense gaze -->
+              <img src="../assets/portfolio/portrait-dramatic-shadow.jpg" alt="Studio portrait — dramatic lighting" style="object-position:top;">
+              <span class="pg-cell-label">Studio Portraits</span>
+            </div>
+            <div style="display:grid;gap:0.75rem;">
+              <div class="pg-cell portrait">
+                <!-- REPLACE: Young woman, golden bokeh, candid portrait at event -->
+                <img src="../assets/portfolio/portrait-golden-bokeh.jpg" alt="Event portrait">
+              </div>
+              <div class="pg-cell portrait">
+                <!-- REPLACE: Clergy man in white robe in garden, flower background -->
+                <img src="../assets/portfolio/portrait-clergy-garden.jpg" alt="Outdoor portrait in garden">
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="pg-grid-3 reveal">
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Elderly woman in purple suit with white fur hat — stunning portrait -->
+              <img src="../assets/portfolio/portrait-purple-fur.jpg" alt="Portrait at celebration">
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Elderly woman in white dress with white floral background -->
+              <img src="../assets/portfolio/portrait-white-dress.jpg" alt="Portrait with floral background">
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Couple on Atlanta steps — red dress + black suit, editorial styled shoot -->
+              <img src="../assets/portfolio/styled-couple-stairs.jpg" alt="Editorial styled portrait">
+              <span class="pg-cell-label">Styled Shoots</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="portfolio-divider"></div>
+
+
+      <!-- ════════════════════════════════════════
+           WEDDINGS & CEREMONIES
+      ════════════════════════════════════════ -->
+      <section class="section" id="weddings">
+        <div class="container">
+          <div class="portfolio-section-label reveal">
+            <span class="eyebrow">Weddings &amp; Ceremonies</span>
+            <h2>Documentary. Emotional. Timeless.</h2>
+          </div>
+
+          <!-- Featured B&W bride -->
+          <div class="pg-cell cinema reveal" style="margin-bottom:0.75rem;border-radius:1rem;overflow:hidden;">
+            <!-- REPLACE: Black and white bride portrait — emotional, looking toward light. Your strongest single image. -->
+            <img src="../assets/portfolio/wedding-bw-bride.jpg" alt="Wedding ceremony — bride portrait in black and white" style="object-position:center 30%;">
+            <span class="pg-cell-label">Documentary Coverage</span>
+          </div>
+
+          <!-- Wedding grid -->
+          <div class="pg-grid-3 reveal" style="margin-bottom:0.75rem;">
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Marine in dress uniform walking bride down the aisle -->
+              <img src="../assets/portfolio/wedding-marine-aisle.jpg" alt="Military wedding — walking down the aisle">
+              <span class="pg-cell-label">Military Ceremony</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Bride in car with autumn bouquet — warm colors, calm expression -->
+              <img src="../assets/portfolio/wedding-bride-car.jpg" alt="Bride portrait with bouquet">
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Wedding couple — groom kissing bride on cheek, outdoor -->
+              <img src="../assets/portfolio/wedding-couple-kiss.jpg" alt="Wedding couple portrait">
+            </div>
+          </div>
+
+          <!-- Outdoor venue + maternity -->
+          <div class="pg-grid-featured reveal">
+            <div class="pg-cell wide">
+              <!-- REPLACE: Outdoor venue setup — white chairs by lake, Georgia greenery -->
+              <img src="../assets/portfolio/venue-lake-setup.jpg" alt="Outdoor ceremony venue by the lake">
+              <span class="pg-cell-label">Outdoor Ceremonies</span>
+            </div>
+            <div class="pg-cell wide">
+              <!-- REPLACE: Maternity portrait on bridge — full-length, lush green background -->
+              <img src="../assets/portfolio/maternity-bridge.jpg" alt="Maternity portrait on wooden bridge">
+              <span class="pg-cell-label">Maternity</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════════════════════════════════
+           STUDIO & COMMERCIAL — DARK BAND
+      ════════════════════════════════════════ -->
+      <section class="portfolio-dark-section" id="studio">
+        <div class="container">
+          <div class="portfolio-section-label reveal">
+            <span class="eyebrow" style="color:rgba(255,250,242,0.65);">Studio &amp; Commercial</span>
+            <h2 style="color:#fffaf2;">Brands. Products. Creative sessions.</h2>
+          </div>
+
+          <div class="pg-grid-auto reveal">
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Birthday Princess little girl — pink backdrop, studio portrait -->
+              <img src="../assets/portfolio/studio-birthday-princess.jpg" alt="Studio portrait — birthday session">
+              <span class="pg-cell-label">Studio Sessions</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Lip gloss beauty/product shot — woman with product on dark grey backdrop -->
+              <img src="../assets/portfolio/studio-lipgloss-commercial.jpg" alt="Commercial product photography">
+              <span class="pg-cell-label">Commercial</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Maternity portrait on fence — close crop, lush green background -->
+              <img src="../assets/portfolio/maternity-fence.jpg" alt="Lifestyle portrait outdoors">
+              <span class="pg-cell-label">Lifestyle</span>
+            </div>
+          </div>
+
+          <!-- Product macro row -->
+          <div class="pg-grid-2 reveal" style="margin-top:0.75rem;max-width:56rem;">
+            <div class="pg-cell square">
+              <!-- REPLACE: Gold glitter heart jewelry on white fur — macro product shot -->
+              <img src="../assets/portfolio/product-hearts-closed.jpg" alt="Product photography — jewelry detail">
+              <span class="pg-cell-label">Product Detail</span>
+            </div>
+            <div class="pg-cell square">
+              <!-- REPLACE: Heart trinket box open with diamond accents on white fur -->
+              <img src="../assets/portfolio/product-hearts-open.jpg" alt="Product photography — jewelry box open">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════════════════════════════════
+           LIFESTYLE & FAMILY
+      ════════════════════════════════════════ -->
+      <section class="section" id="lifestyle">
+        <div class="container">
+          <div class="portfolio-section-label reveal">
+            <span class="eyebrow">Lifestyle &amp; Family</span>
+            <h2>Real moments. Every age.</h2>
+          </div>
+
+          <div class="pg-grid-3 reveal">
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Newborn baby in wicker basket chair — colorful balloon backdrop -->
+              <img src="../assets/portfolio/baby-wicker-basket.jpg" alt="Newborn portrait">
+              <span class="pg-cell-label">Newborns</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Family portrait — parents and daughter, garden backdrop -->
+              <img src="../assets/portfolio/family-portrait-three.jpg" alt="Family portrait session">
+              <span class="pg-cell-label">Families</span>
+            </div>
+            <div class="pg-cell portrait">
+              <!-- REPLACE: Woman in silver hotel corridor — BTS editorial behind-the-scenes feel -->
+              <img src="../assets/portfolio/editorial-hotel-hallway.jpg" alt="Editorial portrait session">
+              <span class="pg-cell-label">Editorial</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════════════════════════════════
+           CTA
+      ════════════════════════════════════════ -->
+      <section class="portfolio-cta">
+        <div class="container">
+          <span class="eyebrow reveal">Ready to Work Together?</span>
+          <h2 class="reveal">Let's create something you'll be proud of.</h2>
+          <p class="reveal">Media Circle serves corporate clients, schools, universities, and private celebrations across metro Atlanta. Fully insured Georgia LLC. Available for institutional contracts and purchase orders.</p>
+          <div class="cta-row reveal">
+            <a class="button button-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer">Check Availability</a>
+            <a class="button button-secondary" href="contact.html">Request a Quote</a>
+          </div>
+          <p class="reveal" style="margin-top:2rem;font-size:0.85rem;letter-spacing:0.08em;">
+            <a href="tel:8338476609" style="color:var(--gold);font-weight:700;">833-847-6609</a>&ensp;·&ensp;
+            <a href="mailto:info@mediacircle.io" style="color:var(--muted);">info@mediacircle.io</a>&ensp;·&ensp;
+            <span style="color:var(--muted);">Stonecrest, Georgia | Serving Metro Atlanta</span>
+          </p>
+        </div>
+      </section>
+
+    </main>
+    <div data-site-footer></div>
+  </div>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
