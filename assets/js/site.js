@@ -48,7 +48,7 @@ function buildHeader(root, currentPage) {
         </div>
         <div class="nav-actions">
           <a class="button button-secondary" href="${siteConfig.phoneHref}">${siteConfig.phoneDisplay}</a>
-          <a class="button button-primary" href="${siteConfig.bookingUrl}" target="_blank" rel="noreferrer">Check Availability</a>
+          <a class="button button-primary" href="${siteConfig.bookingUrl}" target="_blank" rel="noreferrer">Book Here</a>
         </div>
       </div>
     </div>

@@ -5,5 +5,19 @@
   "display": "standalone",
   "background_color": "#f7f4ef",
   "theme_color": "#111111",
-  "description": "Premium event photography, cinematography, booth rentals, and enhancements for metro Atlanta."
+  "description": "Premium event photography, cinematography, booth rentals, and enhancements for metro Atlanta.",
+  "icons": [
+    {
+      "src": "/assets/media-circle-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/media-circle-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

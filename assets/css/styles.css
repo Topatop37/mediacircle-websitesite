@@ -85,8 +85,8 @@ textarea {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: clamp(0.45rem, 1vw, 0.85rem);
   min-height: var(--header-height);
 }
 
@@ -157,6 +157,7 @@ textarea {
   padding: 1rem;
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.24);
   display: none;
+  min-width: 0;
 }
 
 .nav-menu.open {
@@ -166,6 +167,7 @@ textarea {
 .nav-links {
   display: grid;
   gap: 0.35rem;
+  min-width: 0;
 }
 
 .nav-links a {
@@ -185,6 +187,7 @@ textarea {
 
 .nav-actions {
   display: none;
+  flex-shrink: 0;
 }
 
 .nav-actions .button {
@@ -1916,6 +1919,17 @@ li {
 }
 
 @media (min-width: 1040px) {
+  .topbar .container.nav {
+    width: min(calc(100% - 0.75rem), 1250px);
+    margin-left: max(0.35rem, calc((100% - 1250px) / 2));
+    margin-right: auto;
+  }
+
+  .brand-logo {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+
   .nav-toggle {
     display: none;
   }
@@ -1929,17 +1943,23 @@ li {
     border-radius: 0;
     box-shadow: none;
     inset: auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .nav-links {
     grid-auto-flow: column;
     align-items: center;
-    gap: 0.15rem;
+    gap: clamp(0.04rem, 0.22vw, 0.18rem);
+    justify-content: center;
   }
 
   .nav-links a {
     color: var(--muted);
-    padding: 0.7rem 0.9rem;
+    padding: 0.7rem clamp(0.3rem, 0.38vw, 0.5rem);
+    font-size: clamp(0.98rem, 0.96vw, 1.1rem);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
   }
 
   .nav-links a:hover,
@@ -1953,8 +1973,14 @@ li {
   .nav-actions {
     display: flex;
     align-items: center;
-    gap: 0.45rem;
-    margin-left: auto;
+    gap: 0.28rem;
+    margin-left: clamp(0.08rem, 0.22vw, 0.28rem);
+  }
+
+  .nav-actions .button {
+    padding: 0.58rem clamp(0.36rem, 0.42vw, 0.54rem);
+    font-size: clamp(0.98rem, 0.96vw, 1.1rem);
+    letter-spacing: 0.01em;
   }
 
   .hero-grid {
