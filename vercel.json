@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
     { "source": "/pages/photography.html",                              "destination": "/photography",                              "permanent": true },
