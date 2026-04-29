@@ -1099,6 +1099,100 @@ p {
   background: linear-gradient(90deg, var(--gold), var(--gold));
 }
 
+.article-shell {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.article-body {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.article-body h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-top: 0.5rem;
+}
+
+.article-body h3 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.article-body p,
+.article-body li {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.article-body li + li {
+  margin-top: 0.35rem;
+}
+
+.article-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(16, 16, 16, 0.08);
+  margin: 0.35rem 0;
+}
+
+.article-aside {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.blog-post-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.blog-post-card .cta-row {
+  margin-top: 0.25rem;
+}
+
+.article-hero-media {
+  max-width: 58rem;
+  margin: 1.5rem auto 0;
+  overflow: hidden;
+}
+
+.article-hero-media .feature-image {
+  min-height: 22rem;
+  max-height: 36rem;
+}
+
+.article-figure {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.article-figure .feature-image {
+  min-height: 17rem;
+}
+
+.article-figure figcaption {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
 .pricing-grid.compact-center {
   max-width: 920px;
   margin: 0 auto;

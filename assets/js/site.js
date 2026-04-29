@@ -7,15 +7,15 @@ const siteConfig = {
   home: "index.html",
   navItems: [
     { key: "home", label: "Home", href: "index.html" },
-    { key: "photography", label: "Photography", href: "pages/photography.html" },
-    { key: "cinematography", label: "Videography", href: "pages/cinematography.html" },
-    { key: "weddings", label: "Weddings", href: "pages/weddings.html" },
-    { key: "corporate", label: "Corporate", href: "pages/corporate-events.html" },
-    { key: "booths", label: "Photo Booths", href: "pages/photo-booths.html" },
-    { key: "prom", label: "Prom & Graduation", href: "pages/prom-graduation.html" },
-    { key: "portfolio", label: "Portfolio", href: "pages/portfolio.html" },
-    { key: "blog", label: "Blog", href: "pages/blog.html" },
-    { key: "quote", label: "Quote", href: "pages/contact.html" }
+    { key: "photography", label: "Photography", href: "/photography" },
+    { key: "cinematography", label: "Videography", href: "/cinematography" },
+    { key: "weddings", label: "Weddings", href: "/weddings" },
+    { key: "corporate", label: "Corporate", href: "/corporate-events" },
+    { key: "booths", label: "Photo Booths", href: "/photo-booths" },
+    { key: "prom", label: "Prom & Graduation", href: "/prom-graduation" },
+    { key: "portfolio", label: "Portfolio", href: "/portfolio" },
+    { key: "blog", label: "Blog", href: "/blog" },
+    { key: "quote", label: "Quote", href: "/contact" }
   ]
 };
 
@@ -73,11 +73,11 @@ function buildFooter(root) {
           <div>
             <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Explore</h3>
             <div class="footer-list">
-              <a href="${withRoot(root, "pages/weddings.html")}">Weddings</a>
-              <a href="${withRoot(root, "pages/corporate-events.html")}">Corporate</a>
-              <a href="${withRoot(root, "pages/photo-booths.html")}">Photo Booths</a>
-              <a href="${withRoot(root, "pages/prom-graduation.html#prom-packages")}">Prom & Graduation</a>
-              <a href="${withRoot(root, "pages/blog.html")}">Blog</a>
+              <a href="/weddings">Weddings</a>
+              <a href="/corporate-events">Corporate</a>
+              <a href="/photo-booths">Photo Booths</a>
+              <a href="/prom-graduation#prom-packages">Prom & Graduation</a>
+              <a href="/blog">Blog</a>
             </div>
           </div>
           <div>
@@ -100,8 +100,8 @@ function buildFooter(root) {
         <div class="footer-bottom">
           <span>&copy; <span id="current-year"></span> Media Circle. All rights reserved.</span>
           <span class="footer-legal-links">
-            <a href="${withRoot(root, "pages/privacy-policy.html")}">Privacy Policy</a>
-            <a href="${withRoot(root, "pages/terms-of-use.html")}">Terms of Use</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-use">Terms of Use</a>
           </span>
           <span>Designed for a premium mobile-first experience on mediacircle.io.</span>
         </div>
