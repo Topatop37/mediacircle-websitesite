@@ -51,6 +51,7 @@
     { "source": "/terms-of-use",                            "destination": "/pages/terms-of-use.html" },
     { "source": "/graduation-landing",                      "destination": "/pages/graduation-landing.html" },
     { "source": "/photo-booth-landing",                      "destination": "/pages/photo-booth-landing.html" },
+    { "source": "/worldcup-2026",                             "destination": "/pages/worldcup-2026.html" },
     { "source": "/photographer-stonecrest",                 "destination": "/pages/photographer-stonecrest.html" },
     { "source": "/photographer-lithonia",                   "destination": "/pages/photographer-lithonia.html" },
     { "source": "/photographer-decatur",                    "destination": "/pages/photographer-decatur.html" },
