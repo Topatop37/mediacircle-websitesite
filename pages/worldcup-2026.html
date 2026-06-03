@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-10CSJJ7QL6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-10CSJJ7QL6');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Cup 2026 Atlanta — 360 Booth, Photography &amp; Video | Media Circle</title>
+  <meta name="description" content="Atlanta is hosting the 2026 FIFA World Cup. Capture every moment with Media Circle's 360° video booth, event photography, and cinematic video coverage. Limited dates — book now.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="/assets/media-circle-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* ── World Cup theme overrides ── */
+    :root {
+      --wc-red:      #CC0000;
+      --wc-red-dark: #8B0000;
+      --wc-red-deep: #1a0000;
+      --wc-cyan:     #00B4D8;
+      --wc-cyan-lt:  #48CAE4;
+    }
+
+    /* ── Sticky header ── */
+    .lp-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(252, 251, 248, 0.93);
+      border-bottom: 3px solid var(--wc-red);
+    }
+    .lp-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      min-height: 68px;
+      gap: 1rem;
+    }
+    .lp-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .lp-brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    .lp-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .lp-phone {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .lp-phone:hover { color: var(--wc-red); }
+    .lp-phone-label { display: none; }
+    @media (min-width: 560px) { .lp-phone-label { display: inline; } }
+
+    /* ── Urgency banner ── */
+    .urgency-banner {
+      background: var(--wc-red);
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+    .urgency-banner strong { color: #fff; text-decoration: underline; }
+
+    /* ── Countdown strip ── */
+    .countdown-strip {
+      background: var(--wc-red-deep);
+      color: #fff;
+      text-align: center;
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      font-size: clamp(0.8rem, 2.8vw, 0.95rem);
+      letter-spacing: 0.03em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      border-bottom: 2px solid var(--wc-cyan);
+    }
+    .countdown-units { display: inline-flex; gap: 0.9rem; }
+    .countdown-unit { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+    .countdown-num { font-size: clamp(1.3rem, 4.5vw, 1.9rem); font-weight: 800; line-height: 1; color: var(--wc-cyan); }
+    .countdown-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; opacity: 0.68; margin-top: 0.12rem; }
+
+    /* ── Trust bar ── */
+    .trust-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .trust-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .trust-item {
+      flex: 1;
+      min-width: 130px;
+      text-align: center;
+      padding: 1.2rem 1rem;
+    }
+    .trust-item + .trust-item { border-left: 1px solid var(--line); }
+    .trust-value { display: block; font-size: clamp(1.35rem, 4vw, 1.85rem); font-weight: 800; color: var(--wc-red); line-height: 1; }
+    .trust-desc { display: block; font-size: 0.76rem; color: var(--muted); margin-top: 0.18rem; font-weight: 500; }
+    @media (max-width: 560px) {
+      .trust-bar-inner { flex-direction: column; }
+      .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    /* ── World Cup hero ── */
+    .wc-hero {
+      position: relative;
+      background: linear-gradient(160deg, var(--wc-red-dark) 0%, var(--wc-red) 55%, #990000 100%);
+      min-height: 42rem;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    /* Soccer field stripe overlay */
+    .wc-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 58px,
+        rgba(0,0,0,0.12) 58px,
+        rgba(0,0,0,0.12) 116px
+      );
+      pointer-events: none;
+    }
+    .wc-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    .wc-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--wc-cyan-lt);
+      margin-bottom: 1.5rem;
+    }
+    .wc-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.08;
+      margin-bottom: 1.25rem;
+    }
+    .wc-hero h1 span { color: var(--wc-cyan); }
+    .wc-hero .lead {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      max-width: 620px;
+      margin: 0 auto 2.25rem;
+      line-height: 1.65;
+    }
+    .wc-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      justify-content: center;
+    }
+    .btn-wc-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--wc-cyan);
+      color: #0d0d0d;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-wc-primary:hover { background: var(--wc-cyan-lt); transform: translateY(-2px); }
+    .btn-wc-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 2px solid rgba(255,255,255,0.45);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.95rem 1.75rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-wc-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* ── Section eyebrow (WC override) ── */
+    .wc-section-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--wc-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .wc-section-eyebrow::before,
+    .wc-section-eyebrow::after {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--wc-red);
+      border-radius: 2px;
+    }
+
+    /* ── Featured 360 section ── */
+    .wc-featured-section {
+      background: var(--wc-red-deep);
+      padding: 4.5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .wc-featured-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 55px,
+        rgba(255,255,255,0.025) 55px,
+        rgba(255,255,255,0.025) 110px
+      );
+      pointer-events: none;
+    }
+    .wc-featured-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .wc-featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--wc-cyan);
+      color: #0d0d0d;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .wc-featured-section .section-head h2 { color: #fff; }
+    .wc-featured-section .section-head p { color: rgba(255,255,255,0.7); }
+
+    /* 360 pricing cards in WC theme */
+    .wc-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .wc-pricing-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1.25rem;
+      padding: 2rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wc-pricing-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,180,216,0.15); }
+    .wc-pricing-card.is-featured {
+      border: 2px solid var(--wc-cyan);
+      background: rgba(0,180,216,0.07);
+      transform: translateY(-4px);
+      box-shadow: 0 28px 72px rgba(0,180,216,0.18);
+    }
+    .wc-popular-badge {
+      display: block;
+      background: var(--wc-cyan);
+      color: #0d0d0d;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.28rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.4rem;
+    }
+    .wc-pricing-card .pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--wc-cyan-lt);
+      background: rgba(0,180,216,0.12);
+      border-radius: 999px;
+      padding: 0.22rem 0.65rem;
+      display: inline-block;
+      margin-bottom: 0.25rem;
+      width: fit-content;
+    }
+    .wc-pricing-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin: 0;
+    }
+    .wc-price-tag {
+      font-family: 'Manrope', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--wc-cyan);
+      line-height: 1;
+      margin: 0.25rem 0 0.6rem;
+    }
+    .wc-price-tag span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+    }
+    .wc-pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+      display: grid;
+      gap: 0.45rem;
+      flex: 1;
+    }
+    .wc-pricing-card ul li {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.75);
+      padding-left: 1.3em;
+      position: relative;
+    }
+    .wc-pricing-card ul li::before {
+      content: '⚽';
+      position: absolute;
+      left: 0;
+      font-size: 0.7rem;
+      top: 0.05em;
+    }
+    .btn-wc-card {
+      display: block;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-top: auto;
+    }
+    .btn-wc-card-solid {
+      background: var(--wc-cyan);
+      color: #0d0d0d;
+    }
+    .btn-wc-card-solid:hover { background: var(--wc-cyan-lt); }
+    .btn-wc-card-outline {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+    }
+    .btn-wc-card-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
+
+    /* ── Standard section overrides for WC eyebrow ── */
+    .wc-eyebrow-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--wc-red);
+      display: block;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Popular badge on standard pricing cards ── */
+    .popular-badge {
+      display: block;
+      background: var(--wc-red);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-card.is-popular {
+      border: 2px solid var(--wc-red);
+      transform: translateY(-4px);
+      box-shadow: 0 28px 72px rgba(204,0,0,0.18);
+    }
+    .pricing-card.is-popular .button-primary {
+      background: linear-gradient(135deg, var(--wc-red), var(--wc-red-dark));
+      color: #fff;
+    }
+
+    /* ── Bundle bar ── */
+    .bundle-bar {
+      background: linear-gradient(135deg, var(--wc-red-dark), var(--wc-red));
+      border-radius: 1.25rem;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      color: #fff;
+    }
+    .bundle-bar h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .bundle-bar p { color: rgba(255,255,255,0.82); margin-bottom: 1.25rem; }
+    .bundle-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .bundle-item {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 0.85rem;
+      padding: 0.9rem 1.4rem;
+      min-width: 180px;
+    }
+    .bundle-item strong {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--wc-cyan);
+      margin-bottom: 0.15rem;
+    }
+    .bundle-item span { font-size: 0.8rem; color: rgba(255,255,255,0.65); }
+
+    /* ── Why Media Circle (WC dark band) ── */
+    .wc-dark-band {
+      background: linear-gradient(160deg, var(--wc-red-dark) 0%, #1a0505 100%);
+      padding: 5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .wc-dark-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0px, transparent 55px,
+        rgba(255,255,255,0.02) 55px, rgba(255,255,255,0.02) 110px
+      );
+      pointer-events: none;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .why-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      display: grid;
+      gap: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .why-card:hover { border-color: rgba(0,180,216,0.35); }
+    .why-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.25rem; }
+    .why-card h3 { color: #fff; }
+    .why-card p { color: rgba(255,255,255,0.68); font-size: 0.92rem; }
+
+    /* ── Steps ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .step-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .step-num {
+      display: inline-flex;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--wc-red), var(--wc-red-dark));
+      color: #fff;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .step-card h3 { margin-bottom: 0.5rem; color: #101010; }
+    .step-card p { color: #57534e; }
+
+    /* ── Reviews ── */
+    .stars { display: block; color: var(--wc-red); font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 0.55rem; }
+
+    /* ── Final CTA ── */
+    .lp-final-cta {
+      background: linear-gradient(160deg, var(--wc-red-dark) 0%, var(--wc-red) 60%, #990000 100%);
+      color: #fff;
+      padding: 5rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .lp-final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0px, transparent 55px,
+        rgba(0,0,0,0.1) 55px, rgba(0,0,0,0.1) 110px
+      );
+      pointer-events: none;
+    }
+    .lp-final-cta .inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+    .lp-final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .lp-final-cta p { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 2rem; }
+    .lp-contact-note { margin-top: 1.4rem; font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+
+    /* ── Footer ── */
+    .lp-footer {
+      background: #060606;
+      color: rgba(255,250,242,0.45);
+      text-align: center;
+      padding: 1.4rem 1rem;
+      font-size: 0.76rem;
+    }
+    .lp-footer a { color: rgba(255,250,242,0.6); text-decoration: underline; }
+
+    /* ── Mobile sticky bar ── */
+    .mobile-cta-bar { display: none; }
+    @media (max-width: 768px) {
+      .mobile-cta-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 200;
+        background: var(--wc-red-deep);
+        border-top: 2px solid var(--wc-cyan);
+        padding: 0.75rem 1rem;
+        gap: 0.65rem;
+        align-items: center;
+        box-shadow: 0 -8px 32px rgba(0,0,0,0.5);
+      }
+      .mobile-cta-bar .btn-book {
+        flex: 2;
+        display: flex; align-items: center; justify-content: center;
+        background: var(--wc-cyan);
+        color: #0d0d0d;
+        font-weight: 800;
+        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+      .mobile-cta-bar .btn-call {
+        flex: 1;
+        display: flex; align-items: center; justify-content: center;
+        border: 1px solid rgba(255,255,255,0.35);
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.88rem;
+        padding: 0.9rem 0.75rem;
+        border-radius: 999px;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      body { padding-bottom: 76px; }
+    }
+
+    /* ── Promo banner ── */
+    .promo-banner {
+      background: linear-gradient(135deg, #0a0a0a, #0d1a1a);
+      border-top: 3px solid var(--wc-cyan);
+      border-bottom: 3px solid var(--wc-cyan);
+      text-align: center;
+      padding: 1.75rem 1rem;
+    }
+    .promo-banner-inner { max-width: 720px; margin: 0 auto; }
+    .promo-label {
+      display: inline-block;
+      background: var(--wc-cyan);
+      color: #0d0d0d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+    .promo-headline {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.7rem, 5vw, 2.5rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.12;
+      margin: 0 0 0.6rem;
+    }
+    .promo-headline strong { color: var(--wc-cyan); }
+    .promo-sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.92rem;
+      margin: 0 0 1.1rem;
+      line-height: 1.6;
+    }
+    .promo-code-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(0,180,216,0.1);
+      border: 1.5px dashed var(--wc-cyan);
+      border-radius: 0.85rem;
+      padding: 0.7rem 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .promo-code-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .promo-code {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--wc-cyan);
+      letter-spacing: 0.14em;
+    }
+    .promo-dates {
+      display: block;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.4rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-list details { border-bottom: 1px solid var(--line); padding: 1rem 0; }
+    .faq-list summary { font-weight: 700; cursor: pointer; color: var(--text); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+    .faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--wc-red); flex-shrink: 0; }
+    .faq-list details[open] summary::after { content: '−'; }
+    .faq-list details p { margin-top: 0.75rem; color: #57534e; font-size: 0.93rem; line-height: 1.7; }
+  </style>
+</head>
+<body data-root="..">
+
+  <!-- Sticky header -->
+  <header class="lp-header">
+    <div class="lp-header-inner">
+      <a href="https://mediacircle.io" class="lp-brand">
+        <img src="../assets/media-circle-logo.png" alt="Media Circle" width="46" height="46">
+        <span>Media Circle</span>
+      </a>
+      <div class="lp-header-actions">
+        <a href="tel:8338476609" class="lp-phone" data-track="header-call">
+          <span class="lp-phone-label">Call or text: </span>833-847-6609
+        </a>
+        <a class="button button-primary" style="background:var(--wc-red);color:#fff;" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="header-book">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Urgency banner -->
+  <div class="urgency-banner" role="alert">
+    ⚽ <strong>Atlanta is a 2026 FIFA World Cup host city.</strong> Event dates are limited — secure your spot now.
+  </div>
+
+  <!-- Countdown to first Atlanta World Cup match -->
+  <div class="countdown-strip">
+    <span>First World Cup match in Atlanta:</span>
+    <span class="countdown-units" id="countdown-units">
+      <span class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-label">Days</span></span>
+      <span class="countdown-unit"><span class="countdown-num" id="cd-hrs">--</span><span class="countdown-label">Hrs</span></span>
+      <span class="countdown-unit"><span class="countdown-num" id="cd-mins">--</span><span class="countdown-label">Min</span></span>
+      <span class="countdown-unit"><span class="countdown-num" id="cd-secs">--</span><span class="countdown-label">Sec</span></span>
+    </span>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Hero ── -->
+    <section class="wc-hero">
+      <div class="wc-hero-content">
+        <div class="wc-eyebrow">⚽ Atlanta · 2026 FIFA World Cup Host City</div>
+        <h1>World Cup Moments<br><span>Professionally Captured.</span></h1>
+        <p class="lead">360° video booth, event photography, and cinematic video coverage — all built for the biggest sporting event in the world, right here in Atlanta.</p>
+        <div class="wc-cta-row">
+          <a class="btn-wc-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="hero-book">⚽ Book Your Package</a>
+          <a class="btn-wc-secondary" href="#packages">View All Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Trust bar ── -->
+    <div class="trust-bar">
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <span class="trust-value">500+</span>
+          <span class="trust-desc">Events captured</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">5.0 ★</span>
+          <span class="trust-desc">22 Google reviews</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">360°</span>
+          <span class="trust-desc">Video booth available</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">ATL</span>
+          <span class="trust-desc">World Cup host city</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Promo Banner ── -->
+    <div class="promo-banner">
+      <div class="promo-banner-inner">
+        <span class="promo-label">⚽ Limited-Time Offer</span>
+        <h2 class="promo-headline">Save <strong>10%</strong> on any package — World Cup season special.</h2>
+        <p class="promo-sub">Book any 360° booth, photography, or video package between June 15 and July 15, 2026 and save 10% off your total. The biggest event in the world deserves the best coverage — at the best price.</p>
+        <div class="promo-code-box">
+          <span class="promo-code-label">Promo Code</span>
+          <span class="promo-code">ATLWC26</span>
+        </div>
+        <span class="promo-dates">Valid for bookings June 15 – July 15, 2026 only &nbsp;·&nbsp; Enter code at checkout</span>
+      </div>
+    </div>
+
+    <!-- ── Featured: 360 Video Booth ── -->
+    <section class="wc-featured-section" id="packages">
+      <div class="wc-featured-inner">
+        <div style="text-align:center; margin-bottom: 0.5rem;">
+          <span class="wc-featured-badge">⭐ Featured Package</span>
+        </div>
+        <div class="section-head narrow centered" style="margin-bottom: 0;">
+          <p class="wc-eyebrow-label" style="color:var(--wc-cyan-lt);">360° Video Booth</p>
+          <h2 style="color:#fff; font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3rem);">The Ultimate World Cup Experience</h2>
+          <p style="color:rgba(255,255,255,0.72);">Slow-motion 360° video — the most viral moment at any World Cup watch party or event. Choose the package that fits your celebration.</p>
+        </div>
+
+        <div class="wc-pricing-grid">
+
+          <article class="wc-pricing-card reveal">
+            <span class="pill">360° Video Booth</span>
+            <h3>Essential 360</h3>
+            <div class="wc-price-tag">$995 <span>/ 2 hrs</span></div>
+            <ul>
+              <li>Rotating 360° platform & arm</li>
+              <li>Slow-motion HD video output</li>
+              <li>Instant digital sharing (text/email)</li>
+              <li>On-site booth attendant</li>
+              <li>World Cup themed props & setup</li>
+              <li>LED lighting effects</li>
+            </ul>
+            <a class="btn-wc-card btn-wc-card-outline" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="360-essential">Book the Essential</a>
+          </article>
+
+          <article class="wc-pricing-card is-featured reveal">
+            <span class="wc-popular-badge">⚽ Most Popular</span>
+            <span class="pill">360° Video Booth</span>
+            <h3>Signature 360</h3>
+            <div class="wc-price-tag">$1,795 <span>/ 3 hrs</span></div>
+            <ul>
+              <li>Everything in Essential</li>
+              <li>Custom branded video overlays</li>
+              <li>Extended 3-hour rental</li>
+              <li>Highlight reel compilation</li>
+              <li>Premium themed backdrop</li>
+              <li>Priority setup & breakdown</li>
+            </ul>
+            <a class="btn-wc-card btn-wc-card-solid" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="360-signature">Book the Signature</a>
+          </article>
+
+          <article class="wc-pricing-card reveal">
+            <span class="pill">360° Video Booth</span>
+            <h3>Premier 360</h3>
+            <div class="wc-price-tag">$2,695 <span>/ 4 hrs</span></div>
+            <ul>
+              <li>Everything in Signature</li>
+              <li>Full 4-hour premium rental</li>
+              <li>Custom intro & outro animation</li>
+              <li>Dedicated social media package</li>
+              <li>Cold spark fountain add-on eligible</li>
+              <li>White-glove setup experience</li>
+            </ul>
+            <a class="btn-wc-card btn-wc-card-outline" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="360-premier">Book the Premier</a>
+          </article>
+
+        </div>
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.82rem; color:rgba(255,255,255,0.45);">50% deposit required to hold your date &nbsp;·&nbsp; Balance due 7 days before event &nbsp;·&nbsp; Travel fees may apply outside Metro Atlanta</p>
+      </div>
+    </section>
+
+    <!-- ── Photography Coverage ── -->
+    <section class="section" id="photography">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="wc-eyebrow-label">Photography Coverage</span>
+          <h2>Every goal, every reaction, every memory.</h2>
+          <p>Professional event photography for your World Cup watch party, corporate event, or private celebration. Gallery delivered and ready to share.</p>
+        </div>
+
+        <div class="pricing-grid" style="margin-top: 2.5rem;">
+
+          <article class="pricing-card reveal">
+            <span class="pill">Event Photography</span>
+            <h3>Essential Coverage</h3>
+            <div class="price-tag">$695</div>
+            <ul>
+              <li>2-hour event coverage</li>
+              <li>Professionally edited gallery</li>
+              <li>Private online gallery delivery</li>
+              <li>Full print & digital release</li>
+              <li>7–10 day turnaround</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="photo-essential">Book Essential Coverage</a>
+          </article>
+
+          <article class="pricing-card is-popular reveal">
+            <span class="popular-badge">★ Most Popular</span>
+            <span class="pill">Event Photography</span>
+            <h3>Signature Coverage</h3>
+            <div class="price-tag">$1,295</div>
+            <ul>
+              <li>4-hour event coverage</li>
+              <li>Pre-event consultation</li>
+              <li>Professionally edited gallery</li>
+              <li>Private online gallery delivery</li>
+              <li>Full print & digital release</li>
+              <li>7-day turnaround</li>
+            </ul>
+            <a class="button button-primary" style="background:var(--wc-red);color:#fff;" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="photo-signature">Book Signature Coverage</a>
+          </article>
+
+          <article class="pricing-card reveal">
+            <span class="pill">Event Photography</span>
+            <h3>Premier Coverage</h3>
+            <div class="price-tag">$2,295</div>
+            <ul>
+              <li>6-hour event coverage</li>
+              <li>Creative direction consultation</li>
+              <li>Professionally edited gallery</li>
+              <li>Private online gallery delivery</li>
+              <li>Full print & digital release</li>
+              <li>Priority 5-day delivery</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="photo-premier">Book Premier Coverage</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Video Coverage ── -->
+    <section class="section" style="background: var(--surface);" id="video">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="wc-eyebrow-label">Video Coverage</span>
+          <h2>Cinematic films for the beautiful game.</h2>
+          <p>Full event videography with licensed music, professional color grading, and a cinematic edit your guests will watch over and over.</p>
+        </div>
+
+        <div class="pricing-grid" style="margin-top: 2.5rem;">
+
+          <article class="pricing-card reveal">
+            <span class="pill">Event Videography</span>
+            <h3>The Essential Film</h3>
+            <div class="price-tag">$995</div>
+            <ul>
+              <li>2-hour event coverage</li>
+              <li>Cinematic highlight film</li>
+              <li>Licensed music included</li>
+              <li>Professional color grading</li>
+              <li>Digital delivery in 7–10 days</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="video-essential">Book the Essential Film</a>
+          </article>
+
+          <article class="pricing-card is-popular reveal">
+            <span class="popular-badge">★ Most Popular</span>
+            <span class="pill">Event Videography</span>
+            <h3>The Signature Film</h3>
+            <div class="price-tag">$1,895</div>
+            <ul>
+              <li>4-hour event coverage</li>
+              <li>Full cinematic edit</li>
+              <li>Licensed music included</li>
+              <li>Professional color grading</li>
+              <li>Social media cutdown included</li>
+              <li>7-day delivery</li>
+            </ul>
+            <a class="button button-primary" style="background:var(--wc-red);color:#fff;" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="video-signature">Book the Signature Film</a>
+          </article>
+
+          <article class="pricing-card reveal">
+            <span class="pill">Event Videography</span>
+            <h3>The Premier Film</h3>
+            <div class="price-tag">$2,995</div>
+            <ul>
+              <li>6-hour event coverage</li>
+              <li>Full cinematic production</li>
+              <li>Licensed music included</li>
+              <li>Professional color grading</li>
+              <li>Multi-format delivery</li>
+              <li>Priority 5-day delivery</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="video-premier">Book the Premier Film</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bundles ── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="wc-eyebrow-label">Bundle &amp; Save</span>
+          <h2>Photo + Video together — up to $495 off.</h2>
+          <p>Book photography and videography together and we coordinate everything in one call. One team, one setup, one perfect event.</p>
+        </div>
+
+        <div class="bundle-bar reveal">
+          <h3>Photo + Video Bundles</h3>
+          <p>Choose the bundle that fits your event length and budget.</p>
+          <div class="bundle-items">
+            <div class="bundle-item">
+              <strong>$1,495</strong>
+              <span>Essential Duo — saves $195</span>
+            </div>
+            <div class="bundle-item">
+              <strong>$2,795</strong>
+              <span>Signature Duo — saves $395</span>
+            </div>
+            <div class="bundle-item">
+              <strong>$4,795</strong>
+              <span>Premier Duo — saves $495</span>
+            </div>
+          </div>
+          <a class="btn-wc-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="bundle-book">Book a Bundle</a>
+        </div>
+
+        <p style="text-align:center; margin-top:1.25rem; font-size:0.83rem; color:var(--muted);">Not sure which bundle is right? Call or text <a href="tel:8338476609" style="color:var(--wc-red);font-weight:700;">833-847-6609</a> and we'll walk you through it.</p>
+      </div>
+    </section>
+
+    <!-- ── Why Media Circle ── -->
+    <section class="wc-dark-band">
+      <div class="container">
+        <div class="section-head narrow centered reveal" style="position:relative;z-index:1;">
+          <p class="wc-eyebrow-label" style="color:var(--wc-cyan-lt);">Why Media Circle</p>
+          <h2 style="color:#fff; font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem,4.5vw,2.8rem);">Atlanta's go-to team for World Cup moments.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <span class="why-icon">⚽</span>
+            <h3>World Cup Ready</h3>
+            <p>We understand the scale and energy of World Cup events. Our team is equipped for large watch parties, corporate events, and private celebrations.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-icon">🎥</span>
+            <h3>360° Viral Moments</h3>
+            <p>The 360° booth creates slow-motion video content guests instantly share. It's the most talked-about feature at every event we serve.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-icon">✅</span>
+            <h3>No Hidden Fees</h3>
+            <p>The price you see is the price you pay. Editing, delivery, and setup are all included. No surprise invoices the day of your event.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-icon">📍</span>
+            <h3>All of Metro Atlanta</h3>
+            <p>We travel to you anywhere in DeKalb, Gwinnett, Fulton, Clayton, or Rockdale County. Your venue — we're there.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How it works ── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="wc-eyebrow-label">Simple Process</span>
+          <h2>Three steps from booking to your gallery.</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <span class="step-num">1</span>
+            <h3>Book Online</h3>
+            <p>Pick your package, check availability, and lock in your date with a 50% deposit. Takes less than 5 minutes.</p>
+          </div>
+          <div class="step-card reveal">
+            <span class="step-num">2</span>
+            <h3>We Plan Everything</h3>
+            <p>We'll connect before your event to coordinate setup, timing, and any custom requests so everything runs perfectly on the day.</p>
+          </div>
+          <div class="step-card reveal">
+            <span class="step-num">3</span>
+            <h3>Relive the Moment</h3>
+            <p>Your edited gallery and videos are delivered within 7 days — ready to download, share, and keep forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Reviews ── -->
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="wc-eyebrow-label">Client Reviews</span>
+          <h2>Real people. Real results. Real five stars.</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; max-width:960px; margin:2rem auto 0;">
+
+          <div class="service-card reveal" style="text-align:center;">
+            <span class="stars" aria-label="5 stars">★★★★★</span>
+            <p style="color:var(--text);font-style:italic;">"The pictures are absolutely beautiful!! Thanks for your professionalism and dedication to ensuring all photos turned out great."</p>
+            <p style="margin-top:0.85rem;font-weight:700;color:var(--text);">Tijuana Goodrum</p>
+            <p style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Google Review</p>
+          </div>
+
+          <div class="service-card reveal" style="text-align:center;">
+            <span class="stars" aria-label="5 stars">★★★★★</span>
+            <p style="color:var(--text);font-style:italic;">"Great price. They were very kind and professional and patient with us. 10/10 definitely recommend."</p>
+            <p style="margin-top:0.85rem;font-weight:700;color:var(--text);">Kaylee Pumkin</p>
+            <p style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Google Review</p>
+          </div>
+
+          <div class="service-card reveal" style="text-align:center;">
+            <span class="stars" aria-label="5 stars">★★★★★</span>
+            <p style="color:var(--text);font-style:italic;">"GOAT!! Great videos!"</p>
+            <p style="margin-top:0.85rem;font-weight:700;color:var(--text);">Linda Reid</p>
+            <p style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Google Review</p>
+          </div>
+
+        </div>
+        <div style="text-align:center;margin-top:1.5rem;">
+          <a class="button button-secondary" href="https://www.google.com/search?q=Media+Circle+Photo+Booth+%26+Event+Photography" target="_blank" rel="noreferrer">Read All Reviews on Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="wc-eyebrow-label">Quick Answers</span>
+          <h2>World Cup coverage — answered.</h2>
+        </div>
+        <div class="faq-list" style="max-width:680px; margin:2rem auto 0;">
+          <details class="reveal">
+            <summary>What areas do you serve for World Cup events?</summary>
+            <p>We serve all of Metro Atlanta — DeKalb, Gwinnett, Fulton, Clayton, and Rockdale counties. Travel is included within the metro area. For events outside this range, a travel fee may apply.</p>
+          </details>
+          <details class="reveal">
+            <summary>Can I add the 360° booth to my photography or video package?</summary>
+            <p>Absolutely. We can bundle the 360° booth with photography, video, or both. Call or text us at 833-847-6609 and we'll put together a custom quote for your event.</p>
+          </details>
+          <details class="reveal">
+            <summary>How far in advance should I book?</summary>
+            <p>World Cup dates in Atlanta will be in extremely high demand. We recommend booking as early as possible — ideally 4–6 weeks before your event — to guarantee your preferred package and date.</p>
+          </details>
+          <details class="reveal">
+            <summary>What's included in the price?</summary>
+            <p>All photography packages include editing, your private online gallery, and full print release. Video packages include licensed music and color grading. 360° booth packages include setup, an attendant, props, and digital sharing. No surprise fees.</p>
+          </details>
+          <details class="reveal">
+            <summary>How does the deposit and payment work?</summary>
+            <p>A 50% deposit is required to hold your date. The remaining balance is due 7 days before your event. We accept all major cards through our secure online booking system.</p>
+          </details>
+          <details class="reveal">
+            <summary>What if I need to reschedule?</summary>
+            <p>Contact us at least 48 hours before your event and we'll move your date at no charge, subject to availability. Your deposit stays safe and moves with you.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Final CTA ── -->
+    <section class="lp-final-cta">
+      <div class="inner">
+        <div class="wc-eyebrow" style="margin:0 auto 1.5rem; display:inline-flex;">⚽ Limited Dates Available</div>
+        <h2>Don't miss your World Cup moment.</h2>
+        <p>Atlanta games are almost here. Lock in your 360° booth, photography, or video coverage now — it takes less than 5 minutes and you only need 50% down to hold your date.</p>
+        <div class="wc-cta-row">
+          <a class="btn-wc-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="final-book">⚽ Book Your Package Now</a>
+          <a class="btn-wc-secondary" href="tel:8338476609" data-track="final-call">Call 833-847-6609</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.88rem; color: rgba(255,255,255,0.5);">⚽ Booking June 15 – July 15? Use code <strong style="color: var(--wc-cyan); letter-spacing: 0.08em;">ATLWC26</strong> at checkout for 10% off.</p>
+        <p class="lp-contact-note">Questions? Call or text 833-847-6609 &nbsp;·&nbsp; info@mediacircle.io</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="lp-footer">
+    <p>&copy; 2026 Media Circle &nbsp;·&nbsp; 8170 Mall Pkwy #1138, Stonecrest, GA 30038 &nbsp;·&nbsp; <a href="https://mediacircle.io">mediacircle.io</a></p>
+  </footer>
+
+  <!-- Mobile sticky bar -->
+  <div class="mobile-cta-bar" aria-label="Quick booking actions">
+    <a class="btn-book" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="mobile-bar-book">Book Your Package</a>
+    <a class="btn-call" href="tel:8338476609" data-track="mobile-bar-call">Call Now</a>
+  </div>
+
+  <script src="../assets/js/site.js"></script>
+
+  <!-- Countdown to first Atlanta World Cup match — June 15, 2026 -->
+  <script>
+    (function () {
+      var target = new Date('2026-06-15T16:00:00').getTime();
+      var units = document.getElementById('countdown-units');
+      function pad(n) { return n < 10 ? '0' + n : String(n); }
+      function tick() {
+        var diff = target - Date.now();
+        if (diff <= 0) {
+          if (units) units.parentElement.textContent = 'The World Cup is here — book your coverage today!';
+          return;
+        }
+        document.getElementById('cd-days').textContent = pad(Math.floor(diff / 86400000));
+        document.getElementById('cd-hrs').textContent  = pad(Math.floor((diff % 86400000) / 3600000));
+        document.getElementById('cd-mins').textContent = pad(Math.floor((diff % 3600000) / 60000));
+        document.getElementById('cd-secs').textContent = pad(Math.floor((diff % 60000) / 1000));
+      }
+      tick();
+      setInterval(tick, 1000);
+    }());
+  </script>
+
+  <!-- Conversion tracking -->
+  <script>
+    (function () {
+      document.querySelectorAll('[data-track]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (typeof gtag !== 'function') return;
+          var label = el.getAttribute('data-track');
+          var href  = el.getAttribute('href') || '';
+          var eventName = href.indexOf('tel:') === 0 ? 'phone_call' : 'booking_click';
+          gtag('event', eventName, {
+            event_category: 'conversion',
+            event_label: label,
+            page_location: window.location.href
+          });
+        });
+      });
+    }());
+  </script>
+
+</body>
+</html>
