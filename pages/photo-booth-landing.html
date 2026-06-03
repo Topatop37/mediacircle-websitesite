@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-10CSJJ7QL6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-10CSJJ7QL6');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlanta Photo Booth Rentals | 360 & Classic Booths | Media Circle</title>
+  <meta name="description" content="360 video booths and classic photo booth rentals in Atlanta starting at $600. Professional setup, on-site attendant, instant sharing. Summer weekend dates filling fast — book today.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="/assets/media-circle-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* ── Sticky header ── */
+    .lp-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(252, 251, 248, 0.93);
+      border-bottom: 1px solid rgba(16, 16, 16, 0.08);
+    }
+    .lp-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      min-height: 68px;
+      gap: 1rem;
+    }
+    .lp-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .lp-brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    .lp-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .lp-phone {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .lp-phone:hover { color: var(--gold); }
+    .lp-phone-label { display: none; }
+    @media (min-width: 560px) { .lp-phone-label { display: inline; } }
+
+    /* ── Urgency banner ── */
+    .urgency-banner {
+      background: linear-gradient(135deg, #101010, #1c160a);
+      color: rgba(255, 250, 242, 0.88);
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+    .urgency-banner strong { color: var(--gold); }
+
+    /* ── Section divider label ── */
+    .section-divider {
+      background: var(--gold);
+      color: #0f0c08;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── Trust bar ── */
+    .trust-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .trust-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .trust-item {
+      flex: 1;
+      min-width: 130px;
+      text-align: center;
+      padding: 1.2rem 1rem;
+    }
+    .trust-item + .trust-item { border-left: 1px solid var(--line); }
+    .trust-value { display: block; font-size: clamp(1.35rem, 4vw, 1.85rem); font-weight: 800; color: var(--text); line-height: 1; }
+    .trust-desc { display: block; font-size: 0.76rem; color: var(--muted); margin-top: 0.18rem; font-weight: 500; }
+    @media (max-width: 560px) {
+      .trust-bar-inner { flex-direction: column; }
+      .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    /* ── Popular badge ── */
+    .popular-badge {
+      display: block;
+      background: var(--gold);
+      color: #0f0c08;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-card.is-popular {
+      border: 2px solid var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 28px 72px rgba(176, 141, 87, 0.2);
+    }
+
+    /* ── Why Media Circle ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .why-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 250, 242, 0.1);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .why-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.25rem; }
+    .why-card h3 { color: #fffaf2; }
+    .why-card p { color: rgba(255, 250, 242, 0.72); font-size: 0.92rem; }
+
+    /* ── How it works ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .step-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .step-card h3 { margin-bottom: 0.5rem; color: #101010; }
+    .step-card p { color: #57534e; }
+    .step-num {
+      display: inline-flex;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #8a6b36);
+      color: #fff;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Reviews ── */
+    .stars {
+      display: block;
+      color: var(--gold);
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.55rem;
+    }
+
+    /* ── Final CTA ── */
+    .lp-final-cta {
+      background: linear-gradient(135deg, #0f0c08, #1c160a);
+      color: #fffaf2;
+      padding: 5rem 1rem;
+      text-align: center;
+    }
+    .lp-final-cta .eyebrow { color: rgba(255, 250, 242, 0.8); }
+    .lp-final-cta .eyebrow::before { background: var(--gold); }
+    .lp-final-cta h2 { color: #fffaf2; margin-top: 0.75rem; }
+    .lp-final-cta p { color: rgba(255, 250, 242, 0.7); margin-top: 1rem; font-size: 1.05rem; }
+    .lp-final-cta .cta-row { justify-content: center; margin-top: 2rem; }
+    .lp-final-cta .button-primary {
+      background: linear-gradient(135deg, var(--gold), #8a6b36);
+      color: #0f0c08;
+      font-size: 1.05rem;
+      padding: 1rem 2rem;
+    }
+    .lp-final-cta .button-secondary { border-color: rgba(255, 250, 242, 0.38); color: #fffaf2; }
+    .lp-final-cta .button-secondary:hover { background: rgba(255, 250, 242, 0.1); border-color: rgba(255, 250, 242, 0.7); }
+    .lp-contact-note { margin-top: 1.4rem; font-size: 0.8rem; opacity: 0.55; color: #fffaf2; }
+
+    /* ── Minimal footer ── */
+    .lp-footer {
+      background: #060606;
+      color: rgba(255, 250, 242, 0.45);
+      text-align: center;
+      padding: 1.4rem 1rem;
+      font-size: 0.76rem;
+    }
+    .lp-footer a { color: rgba(255, 250, 242, 0.6); text-decoration: underline; }
+
+    /* ── Sticky mobile CTA bar ── */
+    .mobile-cta-bar { display: none; }
+    @media (max-width: 768px) {
+      .mobile-cta-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        background: #0f0c08;
+        border-top: 2px solid var(--gold);
+        padding: 0.75rem 1rem;
+        gap: 0.65rem;
+        align-items: center;
+        box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4);
+      }
+      .mobile-cta-bar .btn-book {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--gold), #8a6b36);
+        color: #0f0c08;
+        font-weight: 800;
+        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+      .mobile-cta-bar .btn-call {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 250, 242, 0.35);
+        color: #fffaf2;
+        font-weight: 700;
+        font-size: 0.88rem;
+        padding: 0.9rem 0.75rem;
+        border-radius: 999px;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      body { padding-bottom: 76px; }
+    }
+  </style>
+</head>
+<body data-root="..">
+
+  <!-- Sticky header — logo + phone + book, no nav -->
+  <header class="lp-header">
+    <div class="lp-header-inner">
+      <a href="https://mediacircle.io" class="lp-brand">
+        <img src="../assets/media-circle-logo.png" alt="Media Circle" width="46" height="46">
+        <span>Media Circle</span>
+      </a>
+      <div class="lp-header-actions">
+        <a href="tel:8338476609" class="lp-phone" data-track="header-call">
+          <span class="lp-phone-label">Call or text: </span>833-847-6609
+        </a>
+        <a class="button button-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="header-book">Check Availability</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Urgency banner -->
+  <div class="urgency-banner" role="alert">
+    &#9889; <strong>Summer weekend dates are filling fast.</strong> Lock in your date before it's gone.
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Hero ── -->
+    <section class="hero-home" style="min-height: 42rem;">
+      <div class="hero-home-media" aria-hidden="true">
+        <picture>
+          <source srcset="../assets/photo-booth-hero.webp" type="image/webp">
+          <img class="feature-image home-hero-image" src="../assets/photo-booth-hero.jpg" alt="Media Circle 360 photo booth rental in action at an Atlanta event" width="1200" height="800" loading="eager">
+        </picture>
+      </div>
+      <div class="hero-home-overlay"></div>
+      <div class="container hero-home-content">
+        <div class="hero-copy hero-home-copy">
+          <span class="eyebrow">Atlanta Photo Booth Rentals</span>
+          <h1>The 360 booth experience your guests will be talking about all night.</h1>
+          <p class="lead">360 video booths and classic photo booth rentals for Atlanta events — starting at $600. Professional setup, on-site attendant, instant sharing included.</p>
+          <div class="cta-row">
+            <a class="button button-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="hero-book">Check Availability</a>
+            <a class="button button-secondary" href="#360-packages">View 360 Booth Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Trust bar ── -->
+    <div class="trust-bar">
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <span class="trust-value">500+</span>
+          <span class="trust-desc">Events served</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">5.0 &#9733;</span>
+          <span class="trust-desc">22 Google reviews</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">From $600</span>
+          <span class="trust-desc">Classic booths</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">Setup Incl.</span>
+          <span class="trust-desc">Every package</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 360 Booth Packages ── -->
+    <section class="section" id="360-packages">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="eyebrow">360 Video Booth Experiences</span>
+          <h2>The booth that gets everyone off the wall and into the moment.</h2>
+          <p>Our 360 booths create instant shareable video content, keep guests engaged all night, and give your event the kind of energy people remember. On-site attendant, LED lighting, and instant sharing included in every package.</p>
+        </div>
+
+        <div class="pricing-grid" style="margin-top: 2.5rem;">
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">360 Booth</span>
+            <h3>The Party Starter</h3>
+            <div class="price-tag">$995</div>
+            <p>Perfect for birthdays, small gatherings, and entry-level 360 experiences.</p>
+            <ul>
+              <li>Up to 2 hours of service</li>
+              <li>360 video booth platform</li>
+              <li>Professional LED lighting setup</li>
+              <li>On-site attendant</li>
+              <li>Unlimited HD video recordings</li>
+              <li>Instant sharing via AirDrop, text, or QR code</li>
+              <li>Basic custom overlay with logo or text</li>
+              <li>Online gallery within 1–3 days</li>
+              <li>Red or black carpet with stanchions</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-party-starter">Book the Party Starter</a>
+          </article>
+
+          <article class="pricing-card is-popular reveal" data-booking-enhanced="true">
+            <span class="popular-badge">&#9733; Most Popular</span>
+            <span class="pill">360 Booth</span>
+            <h3>The Signature Spin</h3>
+            <div class="price-tag">$1,595</div>
+            <p>Ideal for weddings, corporate events, and high-energy celebrations.</p>
+            <ul>
+              <li>Up to 3 hours of service</li>
+              <li>360 video booth platform</li>
+              <li>Professional lighting and enhanced effects</li>
+              <li>1–2 attendants</li>
+              <li>Unlimited HD recordings</li>
+              <li>Custom branded overlay with multiple design options</li>
+              <li>Instant sharing station with iPad kiosk</li>
+              <li>Online gallery delivery</li>
+              <li>Red or black carpet with gold stanchions</li>
+              <li>Fun props and money guns during the final hour</li>
+              <li>Laser lighting effects when conditions allow</li>
+            </ul>
+            <a class="button button-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-signature-spin">Book the Signature Spin</a>
+          </article>
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">360 Booth</span>
+            <h3>The Premier Experience</h3>
+            <div class="price-tag">$2,195</div>
+            <p>Designed for upscale events and premium guest experiences.</p>
+            <ul>
+              <li>Up to 4 hours of service</li>
+              <li>360 video booth platform</li>
+              <li>Advanced lighting setup with dynamic effects</li>
+              <li>2 attendants for full guest management</li>
+              <li>Unlimited HD video recordings</li>
+              <li>Fully customized branded overlays</li>
+              <li>Instant sharing station and live viewing monitor</li>
+              <li>Online gallery within 1–5 days</li>
+              <li>Premium carpet and stanchion setup</li>
+              <li>Props, bubble guns, and money guns</li>
+              <li>Enhanced event lighting integration</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-premier-360">Book the Premier Experience</a>
+          </article>
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">360 Booth</span>
+            <h3>The Legacy Grand Entrance</h3>
+            <div class="price-tag">$2,695</div>
+            <p>Luxury-level experience for weddings, galas, and high-end productions.</p>
+            <ul>
+              <li>Up to 5 hours of service</li>
+              <li>360 video booth platform</li>
+              <li>Full cinematic lighting setup</li>
+              <li>2–3 attendants</li>
+              <li>Unlimited HD video recordings</li>
+              <li>VIP custom overlays for a fully branded experience</li>
+              <li>Instant sharing and dedicated viewing screen</li>
+              <li>Online gallery with priority turnaround</li>
+              <li>Premium carpet and stanchions with VIP setup</li>
+              <li>Props, bubble guns, and money guns</li>
+              <li>Coordinated grand entrance experience</li>
+              <li>Priority setup and teardown scheduling</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-legacy">Book the Legacy Package</a>
+          </article>
+
+        </div>
+        <p style="text-align: center; margin-top: 1.5rem; font-size: 0.83rem; color: var(--muted);">50% deposit required to hold your date &nbsp;·&nbsp; Setup and breakdown included &nbsp;·&nbsp; Serving all of metro Atlanta</p>
+
+        <!-- Mid-page soft lead -->
+        <div style="text-align: center; margin-top: 1.5rem; padding: 1.25rem; background: var(--surface); border-radius: 1rem; border: 1px solid var(--line); max-width: 520px; margin-left: auto; margin-right: auto;" class="reveal">
+          <p style="font-weight: 700; color: var(--text); font-size: 0.95rem; margin-bottom: 0.35rem;">Not sure which package is right for your event?</p>
+          <p style="font-size: 0.85rem; color: var(--muted);">Call or text <a href="tel:8338476609" style="color: var(--gold); font-weight: 700;" data-track="soft-lead-360-call">833-847-6609</a> and we'll walk you through the best fit — no pressure, no obligation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Classic Photo Booth Packages ── -->
+    <section class="section" id="classic-packages" style="background: var(--surface);">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="eyebrow">Classic Photo Booths</span>
+          <h2>Prints, glam photos, and digital keepsakes guests actually keep.</h2>
+          <p>Classic booth options for clients who want a polished setup, a guest-friendly experience, and photos people want to save and share. Perfect for weddings, prom send-offs, corporate events, and private parties.</p>
+        </div>
+
+        <div class="pricing-grid" style="margin-top: 2.5rem;">
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">Classic Booth</span>
+            <h3>The Digital Booth Experience</h3>
+            <div class="price-tag">$600</div>
+            <p>Modern, social-first experience — no prints, instant digital sharing.</p>
+            <ul>
+              <li>Up to 4 hours of service</li>
+              <li>Unlimited digital captures — photos, GIFs, and boomerangs</li>
+              <li>Instant sharing via text, email, or QR</li>
+              <li>Custom overlay or event branding</li>
+              <li>On-site attendant</li>
+              <li>Online gallery delivery</li>
+              <li>Setup and breakdown included</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-digital-booth">Book the Digital Booth</a>
+          </article>
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">Classic Booth</span>
+            <h3>The Essential Booth Experience</h3>
+            <div class="price-tag">$899</div>
+            <p>Fun, nostalgic, and perfect for casual celebrations and parties.</p>
+            <ul>
+              <li>Up to 4 hours of service</li>
+              <li>Unlimited 2x6 printed photo strips</li>
+              <li>On-site attendant</li>
+              <li>Standard backdrop options</li>
+              <li>Fun prop table included</li>
+              <li>Instant digital sharing by text or email</li>
+              <li>Online gallery delivery</li>
+              <li>Setup and breakdown included within 30 miles</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-essential-booth">Book the Essential Booth</a>
+          </article>
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">Classic Booth</span>
+            <h3>The Signature Booth Experience</h3>
+            <div class="price-tag">$1,199</div>
+            <p>Modern, high-quality prints for weddings and corporate events.</p>
+            <ul>
+              <li>Up to 4 hours of service</li>
+              <li>Unlimited 4x6 prints</li>
+              <li>On-site attendant</li>
+              <li>Premium backdrop options</li>
+              <li>Custom template design for event branding</li>
+              <li>Instant sharing and print station</li>
+              <li>Online gallery delivery</li>
+              <li>Setup and breakdown included</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-signature-booth">Book the Signature Booth</a>
+          </article>
+
+          <article class="pricing-card reveal" data-booking-enhanced="true">
+            <span class="pill">Classic Booth</span>
+            <h3>The Glam Booth Experience</h3>
+            <div class="price-tag">$1,499</div>
+            <p>Luxury-style beauty booth with flawless lighting — everyone looks amazing.</p>
+            <ul>
+              <li>Up to 4 hours of service</li>
+              <li>Unlimited 4x6 prints</li>
+              <li>Glam beauty lighting with skin-smoothing effect</li>
+              <li>On-site attendant</li>
+              <li>Premium backdrop selection</li>
+              <li>Custom-designed templates</li>
+              <li>Instant sharing and gallery</li>
+              <li>Setup and breakdown included</li>
+            </ul>
+            <a class="button button-secondary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="pkg-glam-booth">Book the Glam Booth</a>
+          </article>
+
+        </div>
+        <div style="text-align: center; margin-top: 2rem;" class="reveal">
+          <div style="display: inline-flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+            <a class="button button-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="classic-mid-book">Check Availability</a>
+            <a class="button button-secondary" href="tel:8338476609" data-track="classic-mid-call">Call 833-847-6609</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why Media Circle ── -->
+    <section class="dark-band">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="eyebrow" style="color: rgba(255,250,242,0.8);">Why Media Circle</span>
+          <h2 style="color: #fffaf2;">What makes our booth experience different from every other rental in Atlanta.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <span class="why-icon">&#127775;</span>
+            <h3>Professional Setup Every Time</h3>
+            <p>We arrive early, set up professionally, and stay through the entire event. You never have to worry about the booth — we handle everything so you can enjoy the party.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-icon">&#128247;</span>
+            <h3>Instant Sharing on the Spot</h3>
+            <p>Guests can text, email, or AirDrop their videos and photos the moment they step off the platform. No waiting — the content is in their hands before the song ends.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-icon">&#9989;</span>
+            <h3>No Hidden Fees</h3>
+            <p>The price you see includes setup, breakdown, the attendant, and your online gallery. No surprise charges after the event — what you book is what you pay.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-icon">&#128205;</span>
+            <h3>All of Metro Atlanta</h3>
+            <p>We serve events throughout Stonecrest, Lithonia, Decatur, Snellville, Conyers, and all of metro Atlanta. Wherever your venue is, we'll be there — on time, ready to go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How it works ── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="eyebrow">Simple Process</span>
+          <h2>Three steps from booking to your event.</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <span class="step-num">1</span>
+            <h3>Book Your Date</h3>
+            <p>Check availability, choose your package, and lock in your date with a 50% deposit. Takes less than 5 minutes online.</p>
+          </div>
+          <div class="step-card reveal">
+            <span class="step-num">2</span>
+            <h3>We Handle Everything</h3>
+            <p>We arrive early, set up the full booth experience, and manage every guest interaction throughout your event — so you never have to think about it.</p>
+          </div>
+          <div class="step-card reveal">
+            <span class="step-num">3</span>
+            <h3>Guests Love It</h3>
+            <p>Your guests get instant shareable content, printed keepsakes, and memories from the night. You get an online gallery delivered within days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Reviews ── -->
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="eyebrow">Client Reviews</span>
+          <h2>Real events. Real guests. Real five stars.</h2>
+          <p>Here's what clients say after booking and working with Media Circle.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; max-width: 960px; margin: 2rem auto 0;">
+
+          <div class="service-card reveal" style="text-align: center;">
+            <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p style="color: var(--text); font-style: italic;">"The pictures are absolutely beautiful!! Thanks for your professionalism and dedication to ensuring all photos turned out great."</p>
+            <p style="margin-top: 0.85rem; font-weight: 700; color: var(--text);">Tijuana Goodrum</p>
+            <p style="font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem;">Google Review</p>
+          </div>
+
+          <div class="service-card reveal" style="text-align: center;">
+            <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p style="color: var(--text); font-style: italic;">"Great price. They were very kind and professional and patient with us. 10/10 definitely recommend."</p>
+            <p style="margin-top: 0.85rem; font-weight: 700; color: var(--text);">Kaylee Pumkin</p>
+            <p style="font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem;">Google Review</p>
+          </div>
+
+          <div class="service-card reveal" style="text-align: center;">
+            <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p style="color: var(--text); font-style: italic;">"GOAT!! Great videos!"</p>
+            <p style="margin-top: 0.85rem; font-weight: 700; color: var(--text);">Linda Reid</p>
+            <p style="font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem;">Google Review</p>
+          </div>
+
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a class="button button-secondary" href="https://www.google.com/search?q=Media+Circle+Photo+Booth+%26+Event+Photography" target="_blank" rel="noreferrer">Read All Reviews on Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head narrow centered reveal">
+          <span class="eyebrow">Quick Answers</span>
+          <h2>Photo booth rentals — answered.</h2>
+        </div>
+        <div class="faq-list" style="max-width: 680px; margin: 2rem auto 0;">
+          <details class="reveal">
+            <summary>How much space does the 360 booth need?</summary>
+            <p>The 360 platform needs roughly a 10x10 foot clear area. We'll confirm the exact requirements and walk through your venue layout during your pre-event consultation so there are no surprises on setup day.</p>
+          </details>
+          <details class="reveal">
+            <summary>How early do you arrive for setup?</summary>
+            <p>We typically arrive 60–90 minutes before your event start time to set up, test the equipment, and make sure everything is perfect before your first guest walks in.</p>
+          </details>
+          <details class="reveal">
+            <summary>Is an attendant included in every package?</summary>
+            <p>Yes. Every single package includes at least one professional on-site attendant who manages the booth, guides guests, and keeps the experience running smoothly all night.</p>
+          </details>
+          <details class="reveal">
+            <summary>Can I add branding or a custom overlay?</summary>
+            <p>Yes — custom overlays are included in every 360 booth package and most classic packages. We'll create an overlay with your event name, logo, date, or any design that fits your theme.</p>
+          </details>
+          <details class="reveal">
+            <summary>What events are photo booths best for?</summary>
+            <p>Our booths work beautifully for weddings, birthday parties, prom send-offs, graduation parties, corporate events, brand activations, anniversary celebrations, and any event where you want guests to have fun and leave with a keepsake.</p>
+          </details>
+          <details class="reveal">
+            <summary>How does the deposit and payment work?</summary>
+            <p>A 50% deposit is required to hold your date. The remaining balance is due 7 days before your event. We accept all major cards through our secure online booking system.</p>
+          </details>
+          <details class="reveal">
+            <summary>What if I need to reschedule?</summary>
+            <p>No problem. Contact us at least 48 hours before your event and we'll move your date at no charge, subject to availability. Your deposit stays safe and transfers to the new date.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Final CTA ── -->
+    <section class="lp-final-cta">
+      <div class="container">
+        <div class="section-head narrow centered" style="margin: 0 auto; max-width: 620px;">
+          <span class="eyebrow">Reserve Your Booth</span>
+          <h2>Summer weekend dates are going fast.</h2>
+          <p>The best dates book weeks in advance. Check availability now and lock in your date with just 50% down — it takes less than 5 minutes.</p>
+          <div class="cta-row">
+            <a class="button button-primary" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="final-book">Check Availability Now</a>
+            <a class="button button-secondary" href="tel:8338476609" data-track="final-call">Call 833-847-6609</a>
+          </div>
+          <p class="lp-contact-note">Questions? Call or text 833-847-6609 &nbsp;·&nbsp; info@mediacircle.io</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimal footer -->
+  <footer class="lp-footer">
+    <p>&copy; 2026 Media Circle &nbsp;·&nbsp; 8170 Mall Pkwy #1138, Stonecrest, GA 30038 &nbsp;·&nbsp; <a href="https://mediacircle.io">mediacircle.io</a></p>
+  </footer>
+
+  <!-- Sticky mobile CTA bar -->
+  <div class="mobile-cta-bar" aria-label="Quick booking actions">
+    <a class="btn-book" href="https://mediacircle.s1.boothbook.com" target="_blank" rel="noreferrer" data-track="mobile-bar-book">Check Availability</a>
+    <a class="btn-call" href="tel:8338476609" data-track="mobile-bar-call">Call Now</a>
+  </div>
+
+  <!-- Scroll reveal animations -->
+  <script src="../assets/js/site.js"></script>
+
+  <!-- Conversion event tracking -->
+  <script>
+    (function () {
+      document.querySelectorAll('[data-track]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (typeof gtag !== 'function') return;
+          var label = el.getAttribute('data-track');
+          var href  = el.getAttribute('href') || '';
+          var eventName = href.indexOf('tel:') === 0 ? 'phone_call' : 'booking_click';
+          gtag('event', eventName, {
+            event_category: 'conversion',
+            event_label: label,
+            page_location: window.location.href
+          });
+        });
+      });
+    }());
+  </script>
+
+</body>
+</html>
